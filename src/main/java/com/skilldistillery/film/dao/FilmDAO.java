@@ -20,6 +20,8 @@ public interface FilmDAO {
 	public boolean deleteFilm(Film film);
 
 	public Film updateFilm(Film film);
+	
+	public List<Film> getAllFilms();
 
 
 

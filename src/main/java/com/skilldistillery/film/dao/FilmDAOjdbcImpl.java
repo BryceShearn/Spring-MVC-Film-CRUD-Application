@@ -225,6 +225,12 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 		return null;
 	}
 
+	@Override
+	public List<Film> getAllFilms() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 	
