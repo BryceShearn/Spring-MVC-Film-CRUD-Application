@@ -7,7 +7,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>Add film form</title>
+		<title>Add Film Record form</title>
 	</head>
 	<body>
 		<form:form action="addFilm.do" method="POST" modelAttribute="film">

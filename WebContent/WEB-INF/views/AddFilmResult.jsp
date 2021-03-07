@@ -7,6 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+  <h3>States</h3>
+  <form action="indexmethod.do" method="GET">
+    Name:
+    <input type="text" name="name"/> 
+    <input type="submit" value="Get State Data" />
+  </form>
 </body>
 </html>
