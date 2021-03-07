@@ -157,7 +157,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 		try {
 			conn = DriverManager.getConnection(url, user, pass);
 			conn.setAutoCommit(false);
-			String sql = "INSERT INTO film (title,description,language_id,rental_duration,rental_rate,replacement_cost) VALUES (?,?,?,?,?,?)";
+			String sql = "INSERT INTO film (title,description,language_id,rental_duration,rental_rate,replacement_cost,rating,special_features) VALUES (?,?,?,?,?,?,?,?)";
 			PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
@@ -165,6 +165,8 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			stmt.setInt(4, film.getRentalDuration());
 			stmt.setDouble(5, film.getRentalRate());
 			stmt.setDouble(6, film.getReplacementCost());
+			stmt.setString(7, film.getRating());
+			stmt.setString(8, film.getSpecial_features());
 
 			int createCount = stmt.executeUpdate();
 			if (createCount == 1) {
@@ -216,10 +218,38 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 		}
 		return true;
 	}
-
+// int filmID, String description, int rentalDuration, double rentalRate, double replacementCost, String rating, String specialFeatures
 	@Override
-	public Film updateFilm(Film film) {
-
+	public Film updateFilm(int filmID, String title, String description, int rentalDuration, double rentalRate, double replacementCost, String rating, String specialFeatures) {
+		Connection conn = null;
+		try {
+			conn = DriverManager.getConnection(url, user, pass);
+			conn.setAutoCommit(false); // START TRANSACTION
+			String sql = "UPDATE film SET title=?,description=?,rental_duration=?,rental_rate=?,replacement_cost=?,rating=?,special_features=? WHERE id=?;";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			
+			
+			stmt.setString(1, title);
+			stmt.setString(2, description);
+			stmt.setInt(3, rentalDuration);
+			stmt.setDouble(4, rentalRate);
+			stmt.setDouble(5, replacementCost);
+			stmt.setString(6, rating);
+			stmt.setString(7, specialFeatures);
+			stmt.setInt(8, filmID);
+			int updateCount = stmt.executeUpdate();
+			conn.commit(); 
+			//return film;// COMMIT TRANSACTION
+		} catch (SQLException sqle) {
+			sqle.printStackTrace();
+			if (conn != null) {
+				try {
+					conn.rollback();
+				} catch (SQLException sqle2) {
+					System.err.println("Error trying to rollback");
+				}
+			}
+		}
 		return null;
 	}
 
