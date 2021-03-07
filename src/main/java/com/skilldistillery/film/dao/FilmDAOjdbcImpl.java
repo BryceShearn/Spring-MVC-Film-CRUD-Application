@@ -296,7 +296,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 					} catch (SQLException sqle2) {
 						System.err.println("Error trying to rollback");
 					}
-					return film;
+					return null;
 				}
 			}
 		}

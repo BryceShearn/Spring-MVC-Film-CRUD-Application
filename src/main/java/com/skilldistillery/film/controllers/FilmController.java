@@ -1,11 +1,7 @@
 package com.skilldistillery.film.controllers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -38,6 +34,18 @@ public ModelAndView updateFilm(int filmID, String title, String description, Int
 	
 	return mv;
 }
+
+@RequestMapping(path="addfilm.do")
+public ModelAndView addfilm(Film film) {
+	ModelAndView mv = new ModelAndView();
 	
+	mv.addObject("createdFilm", filmDAO.createFilm(film));
+	mv.setViewName("WEB-INF/views/AddFilmForm.jsp");
 	
+	return mv;
+}
+
+
+
+
 }
