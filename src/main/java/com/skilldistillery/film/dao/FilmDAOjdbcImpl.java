@@ -220,19 +220,46 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 	@Override
 	public Film updateFilm(Film film) {
 
-		
-		
 		return null;
 	}
 
 	@Override
 	public List<Film> getAllFilms() {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
-	
-	
-	
+		List<Film> films = new ArrayList<>();
+		Film film = null;
+
+		Connection conn;
+		try {
+			conn = DriverManager.getConnection(url, user, pass);
+			String sql = "SELECT film.*, language.* FROM film JOIN language ON film.language_id = language.id;";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+
+			ResultSet filmResult = stmt.executeQuery();
+			while (filmResult.next()) {
+				film = new Film();
+				film.setId(filmResult.getInt("id"));
+				film.setTitle(filmResult.getString("title"));
+				film.setDescription(filmResult.getString("description"));
+				film.setReleaseYear(filmResult.getInt("release_year"));
+				film.setLanguageId(filmResult.getInt("language_id"));
+				film.setRentalDuration(filmResult.getInt("rental_duration"));
+				film.setRentalRate(filmResult.getDouble("rental_rate"));
+				film.setLength(filmResult.getInt("length"));
+				film.setReplacementCost(filmResult.getDouble("replacement_cost"));
+				film.setRating(filmResult.getString("rating"));
+				film.setSpecial_features(filmResult.getString("special_features"));
+				film.setActors(findActorsByFilmId(film.getId()));
+				film.setLanguage(filmResult.getString("name"));
+				films.add(film);
+			}
+			filmResult.close();
+			stmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return films;
+	}
 
 }
