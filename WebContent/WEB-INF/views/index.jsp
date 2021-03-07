@@ -18,19 +18,17 @@
   <form action="searchid.do" method="GET">
     Name:
     <input type="text" name="filmID"/> 
-    <input type="submit" value="film Id" />
+    <input type="submit" value="film Id"/>
   </form>
+	  
 	  <h3>Add a film</h3>
-  <form action=".do" method="GET">
-    Name:
-    <input type="text" name="filmID"/> 
-    <input type="submit" value="film Id" />
-  </form>
+	<br><a href="createFilmForm.do">Create a Film</a><br>
+  	 
   	  <h3>Search by keyword</h3>
-  <form action="searchid.do" method="GET">
+  <form action="searchkeyword.do" method="GET">
     Name:
     <input type="text" name="filmID"/> 
-    <input type="submit" value="film Id" />
+    <input type="submit" value="film Id"/>
   </form>
 </body>
 </html>
