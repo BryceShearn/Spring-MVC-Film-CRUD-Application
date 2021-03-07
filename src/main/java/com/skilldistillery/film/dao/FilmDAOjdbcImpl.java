@@ -248,37 +248,37 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			} else {
 				stmt.setInt(3, film.getReleaseYear());
 
-			if (rentalDuration != null) {
+				if (rentalDuration != null) {
 					stmt.setInt(4, rentalDuration);
 				} else {
 					stmt.setInt(4, film.getRentalDuration());
 				}
 
-			if (rentalRate != null) {
+				if (rentalRate != null) {
 					stmt.setDouble(5, rentalRate);
 				} else {
 					stmt.setDouble(5, film.getRentalRate());
 				}
 
-			if (length != null) {
+				if (length != null) {
 					stmt.setInt(6, length);
 				} else {
 					stmt.setInt(6, film.getLength());
 				}
 
-			if (replacementCost != null) {
+				if (replacementCost != null) {
 					stmt.setDouble(7, replacementCost);
 				} else {
 					stmt.setDouble(7, film.getReplacementCost());
 				}
 
-			if (rating != null && rating.length() > 0) {
+				if (rating != null && rating.length() > 0) {
 					stmt.setString(8, rating);
 				} else {
 					stmt.setString(8, film.getRating());
 				}
 
-			if (specialFeatures != null && specialFeatures.length() > 0) {
+				if (specialFeatures != null && specialFeatures.length() > 0) {
 					stmt.setString(9, specialFeatures);
 				} else {
 					stmt.setString(9, film.getSpecial_features());
