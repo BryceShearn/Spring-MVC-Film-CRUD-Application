@@ -73,7 +73,7 @@
 		</form>
 		<br>
 			<p>
-				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
+				<a href="returntomain.do" class="btn btn-secondary" role="button">Return to home page</a>
 			</p>
 		</div>
 	</body>

@@ -88,4 +88,9 @@ public class FilmController {
 		mv.setViewName("WEB-INF/views/UpdateFilmResult.jsp");
 		return mv;
 	}
+
+	@RequestMapping(path = "returntomain.do")
+	public String returnToMain() {
+		return "WEB-INF/views/index.jsp";
+	}
 }
