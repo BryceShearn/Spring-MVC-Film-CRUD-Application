@@ -21,11 +21,7 @@
 					<form:input path="releaseYear"/>
 				<br/>
 					<form:label path="language_id">Language:</form:label>
-<<<<<<< HEAD
 						<form:select path="language_id">
-=======
-						<form:select path="language_id" >
->>>>>>> 66f18c2d50b9c0e7950e943e87b65aa2774f3821
 							<form:option value="1">English</form:option>
 							<form:option value="2">Italian</form:option>
 							<form:option value="3">Japanese</form:option>
