@@ -10,18 +10,17 @@
 	</head>
 	<body>
 		<h1>Welcome to the Film look-up tool!</h1>
-			<p> <br>
-			<br>menu text here<br>
-			<br>menu text here<br>	
+	    <br>
 	  	<h3>Search by Id</h3>
   			<form action="searchid.do" method="GET">
     			Enter the Film Id:
     			<input type="text" name="id" size="10"/> 
     			<input type="submit" value="get film Id"/>
   			</form>
-	  	
-	<br><a href="addfilm.do">Click here to Add a film</a><br>
-  	  	<h3>Search list of films by generic keyword</h3>
+		<br>
+			<a href="addfilm.do">Click here to Add a film</a><br>
+  	  	<br>
+  	  	<h3>Search for films by an entered keyword</h3>
   			<form action="searchkeyword.do" method="GET">
     			Enter a keyword to search:
     			<input type="text" name="keyword" size="30"/> 
