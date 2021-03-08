@@ -10,7 +10,7 @@
 		<title>Add Film Record form</title>
 	</head>
 	<body>
-		<form:form action="addfilm.do" method="POST" modelAttribute="film">
+		<form:form action="addFilm.do" method="POST" modelAttribute="film">
 			<form:label path="title">Title:</form:label>
 			<form:input path="title"/>
 				<br/>
@@ -21,7 +21,11 @@
 					<form:input path="releaseYear"/>
 				<br/>
 					<form:label path="language_id">Language:</form:label>
+<<<<<<< HEAD
 						<form:select path="language_id">
+=======
+						<form:select path="language_id" >
+>>>>>>> 66f18c2d50b9c0e7950e943e87b65aa2774f3821
 							<form:option value="1">English</form:option>
 							<form:option value="2">Italian</form:option>
 							<form:option value="3">Japanese</form:option>
@@ -49,6 +53,7 @@
 							<form:option value="PG13">PG-13</form:option>
 							<form:option value="R">R</form:option>
 							<form:option value="NC17">NC-17</form:option>
+	
 						</form:select>
 				<br/>
 					<form:label path="specialFeatures">Special Features:</form:label>

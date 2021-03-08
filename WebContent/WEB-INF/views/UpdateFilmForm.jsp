@@ -34,6 +34,10 @@
 			<br>
 				<form:label path="rentalDuration">Rental Duration:</form:label>
 				<form:input path="rentalDuration"/>
+						<br/>
+				<form:label path="rentalRate">rentalRate:</form:label>
+				<form:input path="rentalRate"/>
+			<br/>
 			<br/>
 				<form:label path="length">Length:</form:label>
 				<form:input path="length"/>

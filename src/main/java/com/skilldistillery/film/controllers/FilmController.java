@@ -74,8 +74,8 @@ public class FilmController {
 	@RequestMapping(path = "deleteresult.do")
 	public ModelAndView deletedResults(int id) {
 		ModelAndView mv = new ModelAndView();
-		boolean deleted = filmDAO.deleteFilm(filmDAO.findFilmById(id).getId());
-		mv.addObject("deletedBool", deleted);
+		boolean deletedBool = filmDAO.deleteFilm(id);
+		mv.addObject("deletedBool", deletedBool);
 		mv.setViewName("WEB-INF/views/DeleteFilmResult.jsp");
 		return mv;
 	}
@@ -87,5 +87,10 @@ public class FilmController {
 		mv.addObject("film", filmDAO.findFilmById(film.getId()));
 		mv.setViewName("WEB-INF/views/UpdateFilmResult.jsp");
 		return mv;
+	}
+
+	@RequestMapping(path = "returntomain.do")
+	public String returnToMain() {
+		return "WEB-INF/views/index.jsp";
 	}
 }

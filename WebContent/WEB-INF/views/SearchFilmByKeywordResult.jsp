@@ -52,12 +52,13 @@
 		<form action="updatefilmform.do" method="GET">
 			<button type="submit" name="film" value="${film}"> Update Film Record Details</button>
 		</form>
+		
 		<form action="deleteresult.do" method="POST">
 			<button type="submit" name="film" value="${film}">Delete Film Record</button>
 		</form>
 		<br>
 			<p>
-				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
+				<a href="returntomain.do" class="btn btn-secondary" role="button">Return to home page</a>
 			</p>
 		</div>
 	</body>

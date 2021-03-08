@@ -9,7 +9,7 @@ public class Film {
 	private int id;
 	private String title;
 	private String description;
-	private int releaseYear;
+	private Integer releaseYear;
 	private int languageId;
 	private int rentalDuration;
 	private double rentalRate;
@@ -34,7 +34,7 @@ public class Film {
 		super();
 	}
 
-	public Film(int id, String title, String description, int releaseYear, int languageId, int rentalDuration,
+	public Film(int id, String title, String description, Integer releaseYear, int languageId, int rentalDuration,
 			double rentalRate, Integer length, double replacementCost, String rating, String special_features) {
 		super();
 		this.id = id;
@@ -74,11 +74,11 @@ public class Film {
 		this.description = description;
 	}
 
-	public int getReleaseYear() {
+	public Integer getReleaseYear() {
 		return releaseYear;
 	}
 
-	public void setReleaseYear(int releaseYear) {
+	public void setReleaseYear(Integer releaseYear) {
 		this.releaseYear = releaseYear;
 	}
 
