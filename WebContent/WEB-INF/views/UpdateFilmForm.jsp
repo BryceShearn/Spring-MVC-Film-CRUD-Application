@@ -22,8 +22,8 @@
 				<form:label path="releaseYear">Release Year:</form:label>
 				<form:input path="releaseYear"/>
 			<br/>
-				<form:label path="languageID">Language (currently ${film.language}):</form:label>
-					<form:select path="languageID">
+				<form:label path="languageId">Language (currently ${film.LanguageId}):</form:label>
+					<form:select path="languageId">
 						<form:option value="1">English</form:option>
 						<form:option value="2">Italian</form:option>
 						<form:option value="3">Japanese</form:option>
