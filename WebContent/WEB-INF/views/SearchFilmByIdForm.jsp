@@ -46,7 +46,17 @@
 				<td>${film.specialFeatures}</td>
 			</tr>
 		</table>
+		<form action="getFilmFields.do" method="GET">
+			<button type="submit" name="filmID" value="${film.filmId}">Update
+					Film Details</button>
+			</form>
+			<form action="deleteFilm.do" method="POST">
+				<button type="submit" name="filmID" value="${film.filmId}">Delete
+					Film</button>
+			</form>
+		
 		</c:if>
+		<br>
 			<p>
 				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
 			</p>	
