@@ -2,24 +2,25 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Search for Film Record by ID Form</title>
-</head>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title>Search for Film Record by ID Form</title>
+	</head>
 	<body>
 		<h1>Search Film Results</h1>
 			<div class="container">
 			<c:out value="${filmId }" />
-			<c:if test="${empty film }">Sorry.. we couldn't find that film. Try again?</c:if>
+			<c:if test="${film.id == null}">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:if test="${not empty film }">
 		<h2>Title: ${film.title}</h2>
 		<table>
 			<tr>
 				<td>Film ID:</td>
-				<td>${film.filmId}</td>
+				<td>${film.id}</td>
 			</tr>
 			<tr>
 				<td>Film Title:</td>
@@ -39,21 +40,19 @@
 			</tr>
 			<tr>
 				<td>Language:</td>
-				<td>${film.language}</td>
+				<td>${film.languageId}</td>
 			</tr>
 			<tr>
 				<td>Special Features:</td>
-				<td>${film.specialFeatures}</td>
+				<td>${film.special_features}</td>
 			</tr>
 		</table>
 		</c:if>
 		<form action="updatefilmform.do">
-			<button type="submit" name="id" value="${film.id}">Update
-					Film Record Details</button>
+			<button type="submit" name="id" value="${film.id}">Update Film Record Details</button>
 			</form>
 			<form action="deleteresult.do" method="POST">
-				<button type="submit" name="id" value="${film.id}">Delete
-					Film Record</button>
+				<button type="submit" name="id" value="${film.id}">Delete Film Record</button>
 			</form>
 		<br>
 			<p>

@@ -19,7 +19,7 @@ public interface FilmDAO {
 	
 	public boolean deleteFilm(int id);
 
-	public Film updateFilm(int filmID, String title, String description, Integer realeaseYear, int languageId, Integer rentalDuration, Double rentalRate, Integer length, Double replacementCost, String rating, String specialFeatures);
+	public Film updateFilm(int filmID, String title, String description, Integer releaseYear, int languageId, Integer rentalDuration, Double rentalRate, Integer length, Double replacementCost, String rating, String specialFeatures);
 	
 	public List<Film> getAllFilms();
 
