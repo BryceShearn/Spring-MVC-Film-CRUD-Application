@@ -44,9 +44,9 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "searchid.do")
-	public ModelAndView searchById(int filmID) {
+	public ModelAndView searchById(int id) {
 		ModelAndView mv = new ModelAndView();
-		Film film = filmDAO.findFilmById(filmID);
+		Film film = filmDAO.findFilmById(id);
 		mv.addObject("film", film);
 		mv.setViewName("WEB-INF/views/SearchFilmByIdResult.jsp");
 		return mv;

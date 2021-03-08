@@ -12,14 +12,13 @@
 	<body>
 		<h1>Search Film Results</h1>
 			<div class="container">
-			<c:out value="${filmId }" />
-			<c:if test="${empty film }">Sorry.. we couldn't find that film. Try again?</c:if>
+			<c:if test="${film == null}">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:if test="${not empty film }">
 		<h2>Title: ${film.title}</h2>
 		<table>
 			<tr>
 				<td>Film ID:</td>
-				<td>${film.filmId}</td>
+				<td>${film.id}</td>
 			</tr>
 			<tr>
 				<td>Film Title:</td>
@@ -43,18 +42,18 @@
 			</tr>
 			<tr>
 				<td>Special Features:</td>
-				<td>${film.specialFeatures}</td>
+				<td>${film.special_features}</td>
 			</tr>
 		</table>
+		</c:if>
 		<form action="updatefilmform.do" method="GET">
-			<button type="submit" name="film" value="${film.filmId}">Update
+			<button type="submit" name="film" value="${film.id}">Update
 					Film Record Details</button>
 			</form>
 			<form action="deleteresult.do" method="POST">
-				<button type="submit" name="filmID" value="${film.filmId}">Delete
+				<button type="submit" name="filmId" value="${film.id}">Delete
 					Film Record</button>
 			</form>
-		</c:if>
 		<br>
 			<p>
 				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
