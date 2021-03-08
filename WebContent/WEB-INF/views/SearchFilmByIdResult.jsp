@@ -12,13 +12,14 @@
 	<body>
 		<h1>Search Film Results</h1>
 			<div class="container">
-			<c:if test="${film == null}">Sorry.. we couldn't find that film. Try again?</c:if>
+			<c:out value="${filmId }" />
+			<c:if test="${empty film }">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:if test="${not empty film }">
 		<h2>Title: ${film.title}</h2>
 		<table>
 			<tr>
 				<td>Film ID:</td>
-				<td>${film.id}</td>
+				<td>${film.filmId}</td>
 			</tr>
 			<tr>
 				<td>Film Title:</td>
@@ -42,7 +43,7 @@
 			</tr>
 			<tr>
 				<td>Special Features:</td>
-				<td>${film.special_features}</td>
+				<td>${film.specialFeatures}</td>
 			</tr>
 		</table>
 		</c:if>
@@ -57,7 +58,7 @@
 		<br>
 			<p>
 				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
-			</p>	
+			</p>
 		</div>
 	</body>
 </html>
