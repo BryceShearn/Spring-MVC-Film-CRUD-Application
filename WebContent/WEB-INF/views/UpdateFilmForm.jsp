@@ -11,7 +11,7 @@
 </head>
 	<body>
 		<form:form action="updatefilmform.do" method="POST" modelAttribute="film">
-			Film ID: ${film.filmId}
+			Film ID: ${film.id}
 			<br/>
 				<form:label path="title">Title:</form:label>
 				<form:input path="title"/>
@@ -22,7 +22,7 @@
 				<form:label path="releaseYear">Release Year:</form:label>
 				<form:input path="releaseYear"/>
 			<br/>
-				<form:label path="languageId">Language (currently ${film.LanguageId}):</form:label>
+				<form:label path="languageId">Language (currently ${film.languageId}):</form:label>
 					<form:select path="languageId">
 						<form:option value="1">English</form:option>
 						<form:option value="2">Italian</form:option>
@@ -51,9 +51,9 @@
 						<form:option value="NC17">NC-17</form:option>
 					</form:select>
 			<br/>
-				<form:label path="specialFeatures">Special Features (currently ${film.specialFeatures}):</form:label>
+				<form:label path="special_features">Special Features (currently ${film.special_features}):</form:label>
 			<br>
-				<form:select multiple="true" path="specialFeatures">
+				<form:select multiple="true" path="special_features">
 					<form:option value="Trailers">Trailers</form:option>
 					<form:option value="Commentaries">Commentaries</form:option>
 					<form:option value="Deleted Scenes">Deleted Scenes</form:option>
@@ -61,7 +61,7 @@
 					<form:option value="n/a">n/a</form:option>
 					</form:select>
 			<br/>
-			<button type="submit" name="filmID" value="${film.filmId}">Submit Update</button>
+			<button type="submit" name="filmID" value="${film.id}">Submit Update</button>
 		</form:form>
 	</body>
 </html>
