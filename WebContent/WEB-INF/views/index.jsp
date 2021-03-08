@@ -6,6 +6,10 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<title>MVC Film Site</title>
 	</head>
 	<body>
@@ -17,14 +21,15 @@
     			<input type="text" name="id" size="10"/> 
     			<input type="submit" value="get film Id"/>
   			</form>
-		<br>
-			<a href="addfilm.do">Click here to Add a film</a><br>
-  	  	<br>
   	  	<h3>Search for films by an entered keyword</h3>
   			<form action="searchkeyword.do" method="GET">
     			Enter a keyword to search:
     			<input type="text" name="keyword" size="30"/> 
     			<input type="submit" value="search by keyword"/>
+  			<br>
+  			<br>
+				<a href="addfilm.do" class="btn btn-default">Click here to add a film</a>
+  	  		<br>
   			</form>
 	</body>
 </html>
