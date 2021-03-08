@@ -74,8 +74,8 @@ public class FilmController {
 	@RequestMapping(path = "deleteresult.do")
 	public ModelAndView deletedResults(int id) {
 		ModelAndView mv = new ModelAndView();
-		boolean deleted = filmDAO.deleteFilm(filmDAO.findFilmById(id).getId());
-		mv.addObject("deletedBool", deleted);
+		boolean deletedBool = filmDAO.deleteFilm(id);
+		mv.addObject("deletedBool", deletedBool);
 		mv.setViewName("WEB-INF/views/DeleteFilmResult.jsp");
 		return mv;
 	}
