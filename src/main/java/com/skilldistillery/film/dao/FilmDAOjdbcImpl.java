@@ -227,70 +227,73 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 	}
 
 	@Override
-	public Film updateFilm(int filmID, String title, String description, Integer releaseYear, Integer rentalDuration,
+	public Film updateFilm(int filmID, String title, String description, Integer releaseYear, int languageId, Integer rentalDuration,
 			Double rentalRate, Integer length, Double replacementCost, String rating, String specialFeatures) {
 		Connection conn = null;
 		Film film = findFilmById(filmID);
 		try {
 			conn = DriverManager.getConnection(url, user, pass);
 			conn.setAutoCommit(false); // START TRANSACTION
-			String sql = "UPDATE film SET title=?,description=?,realease_year=?,rental_duration=?,rental_rate=?,length=?,replacement_cost=?,rating=?,special_features=? WHERE id=?;";
+			String sql = "UPDATE film SET title=?,description=?,release_year=?,language_id=?,rental_duration=?,rental_rate=?,length=?,replacement_cost=?,rating=?,special_features=? WHERE id=?;";
 			PreparedStatement stmt = conn.prepareStatement(sql);
 
-			if (title != null && title.length() > 0) {
+			//if (title != null && title.length() > 0) {
 				stmt.setString(1, title);
-			} else {
-				stmt.setString(1, film.getTitle());
-			}
+			//} else {
+				//stmt.setString(1, film.getTitle());
+			//}
 
-			if (description != null && description.length() > 0) {
+			//if (description != null && description.length() > 0) {
 				stmt.setString(2, description);
-			} else {
-				stmt.setString(2, film.getDescription());
-			}
+			//} else {
+				//stmt.setString(2, film.getDescription());
+			//}
 
-			if (releaseYear != null) {
+			//if (releaseYear != null) {
 				stmt.setInt(3, releaseYear);
-			} else {
-				stmt.setInt(3, film.getReleaseYear());
+			//} else {
+				//stmt.setInt(3, film.getReleaseYear());
+			//}
+			
+			stmt.setInt(4, languageId); // is not null
 
-				if (rentalDuration != null) {
-					stmt.setInt(4, rentalDuration);
-				} else {
-					stmt.setInt(4, film.getRentalDuration());
-				}
+				//if (rentalDuration != null) {
+					stmt.setInt(5, rentalDuration);
+				//} else {
+				//	stmt.setInt(5, film.getRentalDuration());
+				//}
 
-				if (rentalRate != null) {
-					stmt.setDouble(5, rentalRate);
-				} else {
-					stmt.setDouble(5, film.getRentalRate());
-				}
+			//	if (rentalRate != null) {
+					stmt.setDouble(6, rentalRate);
+			//	} else {
+				//	stmt.setDouble(6, film.getRentalRate());
+				//}
 
-				if (length != null) {
-					stmt.setInt(6, length);
-				} else {
-					stmt.setInt(6, film.getLength());
-				}
+				//if (length != null) {
+					stmt.setInt(7, length);
+				//} else {
+				//	stmt.setInt(7, film.getLength());
+			//	}
 
-				if (replacementCost != null) {
-					stmt.setDouble(7, replacementCost);
-				} else {
-					stmt.setDouble(7, film.getReplacementCost());
-				}
+			//	if (replacementCost != null) {
+					stmt.setDouble(8, replacementCost);
+			//	} else {
+				//	stmt.setDouble(8, film.getReplacementCost());
+				//}
 
-				if (rating != null && rating.length() > 0) {
-					stmt.setString(8, rating);
-				} else {
-					stmt.setString(8, film.getRating());
-				}
+				//if (rating != null && rating.length() > 0) {
+					stmt.setString(9, rating);
+			//	} else {
+				//	stmt.setString(9, film.getRating());
+			//	}
 
-				if (specialFeatures != null && specialFeatures.length() > 0) {
-					stmt.setString(9, specialFeatures);
-				} else {
-					stmt.setString(9, film.getSpecial_features());
-				}
+			//	if (specialFeatures != null && specialFeatures.length() > 0) {
+					stmt.setString(10, specialFeatures);
+			//	} else {
+				//	stmt.setString(10, film.getSpecial_features());
+				//}
 
-				stmt.setInt(10, filmID);
+				stmt.setInt(11, filmID);
 
 				int updateCount = stmt.executeUpdate();
 
@@ -304,7 +307,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 					}
 					return null;
 				}
-			}
+			
 		}
 
 		catch (SQLException sqle) {

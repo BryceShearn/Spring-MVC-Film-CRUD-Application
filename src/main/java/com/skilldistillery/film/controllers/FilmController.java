@@ -22,11 +22,11 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "updatefilm.do")
-	public ModelAndView updateFilm(int filmID, String title, String description, Integer releaseYear,
+	public ModelAndView updateFilm(int filmID, String title, String description, Integer releaseYear, Integer languageId,
 			Integer rentalDuration, Double rentalRate, Integer length, Double replacementCost, String rating,
 			String specialFeatures) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("updatedFilm", filmDAO.updateFilm(filmID, title, description, releaseYear, rentalDuration,
+		mv.addObject("updatedFilm", filmDAO.updateFilm(filmID, title, description, releaseYear, languageId, rentalDuration,
 				rentalRate, length, replacementCost, rating, specialFeatures));
 		mv.setViewName("WEB-INF/views/UpdateAddResults.jsp");
 
@@ -83,7 +83,8 @@ public class FilmController {
 	@RequestMapping(path="updatefilmresult.do")
 	public ModelAndView showUpdatedFilm(Film film) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("updatedfilm", film);
+		filmDAO.updateFilm(film.getId(),film.getTitle() , film.getDescription(), film.getReleaseYear(), film.getLanguageId(), film.getRentalDuration(), film.getRentalRate(), film.getLength(), film.getReplacementCost(), film.getRating(), film.getSpecial_features());
+		mv.addObject("film", filmDAO.findFilmById(film.getId()));
 		mv.setViewName("WEB-INF/views/UpdateFilmResult.jsp");
 		return mv;
 	}

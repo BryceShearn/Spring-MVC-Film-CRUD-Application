@@ -10,7 +10,7 @@
 		<title>Add Film Record form</title>
 	</head>
 	<body>
-		<form:form action="addFilm.do" method="POST" modelAttribute="film">
+		<form:form action="addfilm.do" method="POST" modelAttribute="film">
 			<form:label path="title">Title:</form:label>
 			<form:input path="title"/>
 				<br/>
