@@ -13,7 +13,7 @@
 	<body>
 		<h1>Search Film Results</h1>
 			<div class="container">
-			<c:out value="${filmId }" />
+			<c:out value="${film.id }" />
 			<c:if test="${film.id == null}">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:if test="${not empty film }">
 		<h2>Title: ${film.title}</h2>
