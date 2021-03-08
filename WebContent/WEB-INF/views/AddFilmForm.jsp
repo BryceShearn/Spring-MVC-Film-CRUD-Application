@@ -21,7 +21,7 @@
 					<form:input path="releaseYear"/>
 				<br/>
 					<form:label path="language_id">Language:</form:label>
-						<form:select path="language_id" required >
+						<form:select path="language_id">
 							<form:option value="1">English</form:option>
 							<form:option value="2">Italian</form:option>
 							<form:option value="3">Japanese</form:option>
