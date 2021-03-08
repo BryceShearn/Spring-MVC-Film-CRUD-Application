@@ -9,21 +9,21 @@
 		<title>MVC Film Site</title>
 	</head>
 	<body>
-		<h1>Welcome to the Film Site</h1>
-			<p>menu text here<br>
+		<h1>Welcome to the Film look-up tool!</h1>
+			<p> <br>
 			<br>menu text here<br>
 			<br>menu text here<br>	
 	  	<h3>Search by Id</h3>
   			<form action="searchid.do" method="GET">
-    			Film Id:
+    			Enter the Film Id:
     			<input type="text" name="filmId" size="10"/> 
     			<input type="submit" value="get film Id"/>
   			</form>
-	  	<h3>Add a film</h3>
-	<br><a href="createFilmForm.do">Create a Film</a><br>
+	  	
+	<br><a href="addfilm.do">Click here to Add a film</a><br>
   	  	<h3>Search list of films by generic keyword</h3>
   			<form action="searchkeyword.do" method="GET">
-    			keyword:
+    			Enter a keyword to search:
     			<input type="text" name="keyword" size="30"/> 
     			<input type="submit" value="search by keyword"/>
   			</form>

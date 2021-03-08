@@ -63,11 +63,11 @@ public class FilmController {
 
 	}
 
-	@RequestMapping(path = "updateresult.do")
-	public ModelAndView UpdateResult(Film film) {
+	@RequestMapping(path = "updatefilmform.do")
+	public ModelAndView UpdateFilmForm(Film film) {
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("film", film);
-		mv.setViewName("WEB-INF/views/UpdateResult.jsp");
+		mv.setViewName("WEB-INF/views/UpdateFilmForm.jsp");
 		return mv;
 	}
 
