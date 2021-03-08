@@ -8,12 +8,16 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+									<!-- External bootstrap css imports -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 		<title>Search for Film Record by ID Form</title>
 	</head>
 	<body>
 		<h1>Search Film Results</h1>
 			<div class="container">
-			<c:out value="${film.id }" />
 			<c:if test="${film.id == null}">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:if test="${not empty film }">
 		<h2>Title: ${film.title}</h2>
@@ -71,9 +75,9 @@
 				<button type="submit" name="id" value="${film.id}">Delete Film Record</button>
 			</form>
 		<br>
-			<p>
-				<a href="returntomain.do" class="btn btn-secondary" role="button">Return to home page</a>
-			</p>
+  			<br>
+				<a href="returntomain.do" class="btn btn-default"> Return to Home Page </a>
+  	  		<br>
 		</div>
 	</body>
 </html>
