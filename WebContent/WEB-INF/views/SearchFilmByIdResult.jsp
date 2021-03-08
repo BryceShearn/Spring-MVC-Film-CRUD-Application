@@ -46,12 +46,12 @@
 			</tr>
 		</table>
 		</c:if>
-		<form action="updatefilmform.do" method="GET">
-			<button type="submit" name="film" value="${film.id}">Update
+		<form action="updatefilmform.do">
+			<button type="submit" name="id" value="${film.id}">Update
 					Film Record Details</button>
 			</form>
 			<form action="deleteresult.do" method="POST">
-				<button type="submit" name="filmId" value="${film.id}">Delete
+				<button type="submit" name="id" value="${film.id}">Delete
 					Film Record</button>
 			</form>
 		<br>
