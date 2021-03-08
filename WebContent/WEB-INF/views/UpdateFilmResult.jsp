@@ -56,5 +56,9 @@
 			</tr>
 		</table>
 		</c:if>
+				<br>
+			<p>
+				<a href="returntomain.do" class="btn btn-secondary" role="button">Return to home page</a>
+			</p>
 </body>
 </html>
