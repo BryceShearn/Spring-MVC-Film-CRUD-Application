@@ -55,7 +55,6 @@
 				<button type="submit" name="id" value="${film.id}">Delete
 					Film Record</button>
 			</form>
-		</c:if>
 		<br>
 			<p>
 				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
