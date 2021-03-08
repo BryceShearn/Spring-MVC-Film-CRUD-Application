@@ -17,7 +17,7 @@ public interface FilmDAO {
 	
 	public Film createFilm(Film film);
 	
-	public boolean deleteFilm(Film film);
+	public boolean deleteFilm(int id);
 
 	public Film updateFilm(int filmID, String title, String description, Integer realeaseYear, Integer rentalDuration, Double rentalRate, Integer length, Double replacementCost, String rating, String specialFeatures);
 	

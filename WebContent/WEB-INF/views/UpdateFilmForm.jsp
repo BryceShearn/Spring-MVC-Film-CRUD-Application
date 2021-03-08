@@ -10,7 +10,7 @@
 	<title>Update Film Record</title>
 </head>
 	<body>
-		<form:form action="updatefilmform.do" method="POST" modelAttribute="film">
+		<form:form action="updatefilmresult.do" method="POST" modelAttribute="film">
 			Film ID: ${film.id}
 			<br/>
 				<form:label path="title">Title:</form:label>
@@ -61,7 +61,7 @@
 					<form:option value="n/a">n/a</form:option>
 					</form:select>
 			<br/>
-			<button type="submit" name="filmID" value="${film.id}">Submit Update</button>
+			<button  type="submit" name="id" value="${film.id}">Submit Update</button>
 		</form:form>
 	</body>
 </html>

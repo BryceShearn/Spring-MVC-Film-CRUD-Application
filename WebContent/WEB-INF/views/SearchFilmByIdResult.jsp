@@ -46,19 +46,20 @@
 				<td>${film.specialFeatures}</td>
 			</tr>
 		</table>
-		<form action="updatefilmform.do" method="GET">
-			<button type="submit" name="film" value="${film.filmId}">Update
+		</c:if>
+		<form action="updatefilmform.do">
+			<button type="submit" name="id" value="${film.id}">Update
 					Film Record Details</button>
 			</form>
 			<form action="deleteresult.do" method="POST">
-				<button type="submit" name="filmID" value="${film.filmId}">Delete
+				<button type="submit" name="id" value="${film.id}">Delete
 					Film Record</button>
 			</form>
 		</c:if>
 		<br>
 			<p>
 				<a href="index.jsp" class="btn btn-secondary" role="button">Return to home page</a>
-			</p>	
+			</p>
 		</div>
 	</body>
 </html>

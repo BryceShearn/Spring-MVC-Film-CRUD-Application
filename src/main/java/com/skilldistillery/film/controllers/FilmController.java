@@ -64,20 +64,27 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "updatefilmform.do")
-	public ModelAndView UpdateFilmForm(Film film) {
+	public ModelAndView UpdateFilmForm(int id) {
 		ModelAndView mv = new ModelAndView();
-		mv.addObject("film", film);
+		mv.addObject("film", filmDAO.findFilmById(id));
 		mv.setViewName("WEB-INF/views/UpdateFilmForm.jsp");
 		return mv;
 	}
 
 	@RequestMapping(path = "deleteresult.do")
-	public ModelAndView deletedResults(Film film) {
+	public ModelAndView deletedResults(int id) {
 		ModelAndView mv = new ModelAndView();
-		boolean deleted = filmDAO.deleteFilm(film);
+		boolean deleted = filmDAO.deleteFilm(filmDAO.findFilmById(id).getId());
 		mv.addObject("deletedBool", deleted);
 		mv.setViewName("WEB-INF/views/DeleteFilmResult.jsp");
 		return mv;
 	}
 
+	@RequestMapping(path="updatefilmresult.do")
+	public ModelAndView showUpdatedFilm(Film film) {
+		ModelAndView mv = new ModelAndView();
+		mv.addObject("updatedfilm", film);
+		mv.setViewName("WEB-INF/views/UpdateFilmResult.jsp");
+		return mv;
+	}
 }

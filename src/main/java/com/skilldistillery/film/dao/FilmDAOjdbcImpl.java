@@ -201,7 +201,8 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 	}
 
 	@Override
-	public boolean deleteFilm(Film film) {
+	public boolean deleteFilm(int id) {
+		Film film = findFilmById(id);
 		Connection conn = null;
 		try {
 			conn = DriverManager.getConnection(url, user, pass);
