@@ -14,7 +14,7 @@
 		<h1>Add Film Result</h1>
 			<div class="container">
 			<c:forEach var="film" items="${films}">
-			<c:if test="${film.title == null}">Sorry.. we couldn't find that film. Try again?</c:if>
+			<c:if test="${film.title == null}">Sorry.. we didn't quite catch that. Try again?</c:if>
 			<c:if test="${not empty film}">
 		<h2>Title: ${film.title}</h2>
 		<table>
@@ -36,7 +36,7 @@
 			</tr>
 			<tr>
 				<td>Language:</td>
-				<td>${film.languageId}</td>
+				<td>${film.language}</td>
 			</tr>
 			<tr>
 				<td>Rental Duration:</td>

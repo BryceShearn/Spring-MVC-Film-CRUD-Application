@@ -28,7 +28,7 @@
 			</tr>
 			<tr>
 				<td>Language:</td>
-				<td>${film.languageId}</td>
+				<td>${film.language}</td>
 			</tr>
 			<tr>
 				<td>Rental Duration:</td>

@@ -35,12 +35,28 @@
 				<td>${film.releaseYear}</td>
 			</tr>
 			<tr>
-				<td>Rating:</td>
-				<td>${film.rating}</td>
+				<td>Language:</td>
+				<td>${film.language}</td>
 			</tr>
 			<tr>
-				<td>Language:</td>
-				<td>${film.languageId}</td>
+				<td>Rental Duration:</td>
+				<td>${film.rentalDuration}</td>
+			</tr>
+			<tr>
+				<td>Rental Rate:</td>
+				<td>${film.rentalRate}</td>
+			</tr>
+			<tr>
+				<td>Length:</td>
+				<td>${film.length}</td>
+			</tr>
+			<tr>
+				<td>Replacement Cost:</td>
+				<td>${film.replacementCost}</td>
+			</tr>
+			<tr>
+				<td>Rating:</td>
+				<td>${film.rating}</td>
 			</tr>
 			<tr>
 				<td>Special Features:</td>
