@@ -198,7 +198,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			}
 		}
 
-		return findFilmById(film.getId());
+		return film;
 	}
 
 	@Override
