@@ -17,7 +17,7 @@
 	<body>
 		<c:choose>
     	<c:when test="${deletedBool == true}">
-  		Film was successfully deleted ${filmID}
+  		Film was successfully deleted
     	</c:when>    
 
     	<c:otherwise> Film was not deleted.. try again? </c:otherwise>
