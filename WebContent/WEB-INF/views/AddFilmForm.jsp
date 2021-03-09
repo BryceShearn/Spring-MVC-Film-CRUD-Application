@@ -20,8 +20,8 @@
 					<form:label path="releaseYear">Release year:</form:label>
 					<form:input path="releaseYear"/>
 				<br/>
-					<form:label path="language_id">Language:</form:label>
-						<form:select path="language_id">
+					<form:label path="languageId">Language:</form:label>
+						<form:select path="languageId">
 							<form:option value="1">English</form:option>
 							<form:option value="2">Italian</form:option>
 							<form:option value="3">Japanese</form:option>
@@ -52,8 +52,8 @@
 	
 						</form:select>
 				<br/>
-					<form:label path="specialFeatures">Special Features:</form:label>
-						<form:select multiple="true" path="specialFeatures">
+					<form:label path="special_features">Special Features:</form:label>
+						<form:select multiple="true" path="special_features">
 		   					<form:option value="Trailers">Trailers</form:option>
 							<form:option value="Commentaries">Commentaries</form:option>
 							<form:option value="Deleted Scenes">Deleted Scenes</form:option>

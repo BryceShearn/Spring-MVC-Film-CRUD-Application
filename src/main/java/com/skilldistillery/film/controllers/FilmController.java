@@ -46,8 +46,8 @@ public class FilmController {
 	public ModelAndView addFilmResult(Film film) {
 		ModelAndView mv = new ModelAndView();
 
-		//mv.addObject("createdFilm", filmDAO.createFilm(film));
-		mv.setViewName("WEB-INF/views/AddFilmForm.jsp");
+		mv.addObject("createdFilm", filmDAO.createFilm(film));
+		mv.setViewName("WEB-INF/views/AddFilmResult.jsp");
 
 		return mv;
 	}
