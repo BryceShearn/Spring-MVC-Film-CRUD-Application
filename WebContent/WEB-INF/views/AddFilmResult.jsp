@@ -18,7 +18,6 @@
 	<body>
 		<h1>Add Film Result</h1>
 			<div class="container">
-			<c:forEach var="film" items="${films}">
 			<c:if test="${film.title == null}">Sorry.. we didn't quite catch that. Try again?</c:if>
 			<c:if test="${not empty film}">
 		<h2>Title: ${film.title}</h2>
@@ -69,7 +68,6 @@
 			</tr>
 		</table>
 		</c:if>
-		</c:forEach>
 		<form action="updatefilmform.do" method="GET">
 			<button type="submit" name="film" value="${film}"> Update Film Record Details</button>
 		</form>

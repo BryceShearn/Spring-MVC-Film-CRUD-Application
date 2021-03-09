@@ -34,10 +34,19 @@ public class FilmController {
 	}
 
 	@RequestMapping(path = "addfilm.do")
-	public ModelAndView addfilm(Film film) {
+	public ModelAndView addFilm(Film film) {
 		ModelAndView mv = new ModelAndView();
 
-		mv.addObject("createdFilm", filmDAO.createFilm(film));
+		//mv.addObject("createdFilm", filmDAO.createFilm(film));
+		mv.setViewName("WEB-INF/views/AddFilmForm.jsp");
+
+		return mv;
+	}
+	@RequestMapping(path = "addfilmresult.do")
+	public ModelAndView addFilmResult(Film film) {
+		ModelAndView mv = new ModelAndView();
+
+		//mv.addObject("createdFilm", filmDAO.createFilm(film));
 		mv.setViewName("WEB-INF/views/AddFilmForm.jsp");
 
 		return mv;
