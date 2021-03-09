@@ -52,15 +52,15 @@
 				<td>${film.special_features}</td>
 			</tr>
 		</table>
-		</c:if>
-		</c:forEach>
 		<form action="updatefilmform.do" method="GET">
-			<button type="submit" name="film" value="${film}"> Update Film Record Details</button>
+			<button type="submit" name="id" value="${film.id}"> Update Film Record Details</button>
 		</form>
 		
 		<form action="deleteresult.do" method="POST">
-			<button type="submit" name="film" value="${film}">Delete Film Record</button>
+			<button type="submit" name="id" value="${film.id}">Delete Film Record</button>
 		</form>
+		</c:if>
+		</c:forEach>
 		<br>
   			<br>
 				<a href="returntomain.do" class="btn btn-default"> Return to Home Page </a>
