@@ -162,7 +162,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 		try {
 			conn = DriverManager.getConnection(url, user, pass);
 			conn.setAutoCommit(false);
-			String sql = "INSERT INTO film (title,description,release_year,language_id,rental_duration,rental_rate,replacement_cost,rating,special_features) VALUES (?,?,?,?,?,?,?,?,?)";
+			String sql = "INSERT INTO film (title,description,release_year,language_id,rental_duration,rental_rate,length,replacement_cost,rating,special_features) VALUES (?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			stmt.setString(1, film.getTitle());
 			stmt.setString(2, film.getDescription());
@@ -170,9 +170,10 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			stmt.setInt(4, film.getLanguageId());
 			stmt.setInt(5, film.getRentalDuration());
 			stmt.setDouble(6, film.getRentalRate());
-			stmt.setDouble(7, film.getReplacementCost());
-			stmt.setString(8, film.getRating());
-			stmt.setString(9, film.getSpecial_features());
+			stmt.setInt(7, film.getLength());
+			stmt.setDouble(8, film.getReplacementCost());
+			stmt.setString(9, film.getRating());
+			stmt.setString(10, film.getSpecial_features());
 
 			int createCount = stmt.executeUpdate();
 			if (createCount == 1) {
@@ -197,7 +198,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			}
 		}
 
-		return film;
+		return findFilmById(film.getId());
 	}
 
 	@Override
