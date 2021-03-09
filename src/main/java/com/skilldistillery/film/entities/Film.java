@@ -19,8 +19,17 @@ public class Film {
 	private String special_features;
 	private List<Actor> actors = new ArrayList<>();
 	private String language;
+	private ArrayList<String> categories = new ArrayList<>();
 
 
+
+	public ArrayList<String> getCategories() {
+		return categories;
+	}
+
+	public void setCategories(ArrayList<String> categories) {
+		this.categories = categories;
+	}
 
 	public String getLanguage() {
 		return language;

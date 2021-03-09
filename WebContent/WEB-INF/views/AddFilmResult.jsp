@@ -63,9 +63,19 @@
 				<td>${film.rating}</td>
 			</tr>
 			<tr>
-				<td>(CMD + CLICK for multiple)Special Features:</td>
+				<td>Special Features:</td>
 				<td>${film.special_features}</td>
 			</tr>
+			<c:if test="${not empty film.categories}">
+			<tr>
+			<td>Categories:</td>
+			<c:forEach var="category" items="${film.categories}">
+			<td>${category}</td>
+			
+			</c:forEach>
+			
+			</tr>
+			</c:if>
 		</table>
 		</c:if>
 		<form action="updatefilmform.do" method="GET">

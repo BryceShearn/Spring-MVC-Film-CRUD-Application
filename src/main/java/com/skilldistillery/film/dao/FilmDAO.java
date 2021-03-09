@@ -1,5 +1,6 @@
 package com.skilldistillery.film.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import com.skilldistillery.film.entities.Actor;
@@ -23,6 +24,7 @@ public interface FilmDAO {
 	
 	public List<Film> getAllFilms();
 
+	public ArrayList<String> getCategories(int id);
 
 
 }

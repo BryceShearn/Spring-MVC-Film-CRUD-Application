@@ -51,6 +51,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 				film.setSpecial_features(filmResult.getString("special_features"));
 				film.setLanguage(filmResult.getString("name"));
 				film.setActors(findActorsByFilmId(id));
+				film.setCategories(getCategories(id));
 			}
 			filmResult.close();
 			stmt.close();
@@ -59,6 +60,28 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			e.printStackTrace();
 		}
 		return film;
+	}
+	
+	public ArrayList<String> getCategories(int id){
+		Film film = null;
+		ArrayList<String> categories = new ArrayList<>();
+		Connection conn;
+		try {
+			conn = DriverManager.getConnection(url, user, pass);
+			String sql = "SELECT category.* FROM category JOIN film_category  ON  category.id = film_category.film_id JOIN film ON film_category.film_id = film.id WHERE film.id = ?;";
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setInt(1, id);
+			ResultSet filmResult = stmt.executeQuery();
+			if (filmResult.next()) {
+			categories.add(filmResult.getString("name"));
+			}
+			filmResult.close();
+			stmt.close();
+			conn.close();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return categories;
 	}
 
 	@Override
@@ -132,18 +155,7 @@ public class FilmDAOjdbcImpl implements FilmDAO {
 			while (filmResult.next()) {
 				film = new Film();
 				film.setId(filmResult.getInt("id"));
-				film.setTitle(filmResult.getString("title"));
-				film.setDescription(filmResult.getString("description"));
-				film.setReleaseYear(filmResult.getInt("release_year"));
-				film.setLanguageId(filmResult.getInt("language_id"));
-				film.setRentalDuration(filmResult.getInt("rental_duration"));
-				film.setRentalRate(filmResult.getDouble("rental_rate"));
-				film.setLength(filmResult.getInt("length"));
-				film.setReplacementCost(filmResult.getDouble("replacement_cost"));
-				film.setRating(filmResult.getString("rating"));
-				film.setSpecial_features(filmResult.getString("special_features"));
-				film.setActors(findActorsByFilmId(film.getId()));
-				film.setLanguage(filmResult.getString("name"));
+				film = findFilmById(film.getId());
 				films.add(film);
 			}
 			filmResult.close();

@@ -18,8 +18,8 @@
 	<body>
 		<h1>Search film by Keyword</h1>
 			<div class="container">
+			<c:if test="${empty films}">Sorry.. we couldn't find that film. Try again?</c:if>
 			<c:forEach var="film" items="${films}">
-			<c:if test="${film.title == null}">No film found</c:if>
 			<c:if test="${not empty film}">
 		<h2>Title: ${film.title}</h2>
 		<table>
@@ -51,6 +51,29 @@
 				<td>Special Features:</td>
 				<td>${film.special_features}</td>
 			</tr>
+			<c:if test="${not empty film.categories}">
+			<tr>
+			<td>Categories:</td>
+			<c:forEach var="category" items="${film.categories}">
+			<td>${category}</td>
+			
+			</c:forEach>
+			
+			</tr>
+			</c:if>
+				<c:if test="${not empty film.actors}">
+					<tr>
+						<td>Actors:</td>
+						<td><c:forEach var="actor" items="${film.actors}">
+
+								<ul>
+									<li>${actor.firstName}${actor.lastName }</li>
+
+								</ul>
+
+							</c:forEach></td>
+					</tr>
+				</c:if>
 		</table>
 		<form action="updatefilmform.do" method="GET">
 			<button type="submit" name="id" value="${film.id}"> Update Film Record Details</button>
