@@ -10,8 +10,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/BryceShearn/Java-StockAnalysis-Application">
-    <img src="https://images.unsplash.com/photo-1468254095679-bbcba94a7066?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=749&q=80" alt="Logo" width="550" height="350">
+  <a href="https://github.com/BryceShearn/Spring-MVC-Film-CRUD-Application">
+    <img src="https://images.unsplash.com/photo-1581905764498-f1b60bae941a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80" alt="Logo" width="550" height="350">
   </a>
 
   <h3 align="center">Film Tracker Application</h3>
@@ -31,7 +31,7 @@
     </kbd>
   <br />
   <br />
-    <a href="https://github.com/BryceShearn/Java-StockAnalysis-Application"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/BryceShearn/Spring-MVC-Film-CRUD-Application"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     ·
