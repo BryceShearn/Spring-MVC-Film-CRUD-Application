@@ -99,7 +99,7 @@
 
 ## Meet The Creators:
 * [Bryce Shearn](https://github.com/BryceShearn)
-* <br />
+ <br />
 * [Nick Bird](https://github.com/nick-bird)
 
 <!-- USAGE EXAMPLES -->
