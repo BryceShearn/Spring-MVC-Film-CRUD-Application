@@ -19,7 +19,7 @@
   <p align="center">
     <kbd>
       <br />
-      This program is designed to a be website application that creates, reads,
+      This application is designed to a be website application that creates, reads,
       <br />
       <br />
       <br />
