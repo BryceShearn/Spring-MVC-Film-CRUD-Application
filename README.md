@@ -50,7 +50,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#meet-the-creator">Meet The Creator</a></li>
+        <li><a href="#meet-the-creators">Meet The Creators</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
