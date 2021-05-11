@@ -50,7 +50,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#meet-the-creator">Meet The Creators</a></li>
+        <li><a href="#meet-the-creators">Meet The Creators</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -97,8 +97,10 @@
 <br />
 <br />
 
-## Meet The Creator:
+## Meet The Creators:
 * [Bryce Shearn](https://github.com/BryceShearn)
+* <br />
+* [Nick Bird](https://github.com/nick-bird)
 
 <!-- USAGE EXAMPLES -->
 ## Usage
@@ -151,6 +153,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 <br />
 [Bryce Shearn](https://github.com/BryceShearn)
+<br />
+[Nick Bird](https://github.com/nick-bird)
 <br />
 
 Project Link: [https://github.com/BryceShearn/Spring-MVC-Film-CRUD-Application](https://github.com/BryceShearn/Java-StockAnalysis-Application)
