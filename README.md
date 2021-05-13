@@ -68,7 +68,8 @@
 <i></i>
 ### Technologies Used
 <br />  
-   * Java
+  <ul>
+  * Java
    * Spring
    * Gradle
    * SQL
@@ -78,7 +79,7 @@
    * Spring STS
    * Atom
    * Git and Github
-
+</ul>
 ### Lessons Learned
 <br />
 * <i></i>
