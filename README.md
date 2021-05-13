@@ -69,16 +69,16 @@
 ### Technologies Used
 <br />  
   <ul>
-  * Java
-   * Spring
-   * Gradle
-   * SQL
-   * MySQL
-   * Apache Tomcat
-   * AWS
-   * Spring STS
-   * Atom
-   * Git and Github
+  <li>* Java
+   <li>* Spring
+   <li>* Gradle
+  <li> * SQL
+   <li>* MySQL
+   <li>* Apache Tomcat
+  <li> * AWS
+   <li>* Spring STS
+  <li> * Atom
+  <li> * Git and Github
 </ul>
 ### Lessons Learned
 <br />
