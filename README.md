@@ -70,17 +70,16 @@
 <br />
 * <i></i>    
 
-    * Calling Methods
-
-    * Conditionals (if/else)
-
-    * Looping (while loops)
-
-    * Constant variables
-
-    * Java math floor and round functions
-
-    * Switch
+   * Java
+   * Spring
+   * Gradle
+   * SQL
+   * MySQL
+   * Apache Tomcat
+   * AWS
+   * Spring STS
+   * Atom
+   * Git and Github
 
 ### Lessons Learned
 <br />
