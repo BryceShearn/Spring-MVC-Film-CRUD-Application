@@ -67,9 +67,7 @@
 ## About The Project
 <i></i>
 ### Technologies Used
-<br />
-* <i></i>    
-
+<br />  
    * Java
    * Spring
    * Gradle
